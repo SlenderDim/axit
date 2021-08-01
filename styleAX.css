@@ -1212,10 +1212,9 @@ input {
         margin-bottom: 30px;
     }
 
-    /* .price__card-most,
-    .price__card {
-        width: 245px;
-    } */
+    .price__cards {
+        margin-top: 40px;
+    }
 
 
 
