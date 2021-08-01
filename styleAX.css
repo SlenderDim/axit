@@ -277,6 +277,49 @@ input {
     color: #969696;
 }
 
+.form__name,
+.form__email,
+.form__password::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; 
+    color: #c2c2c2;
+} 
+
+.form__name,
+.form__email,
+.form__password::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form__name,
+.form__email,
+.form__password:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form__name,
+.form__email,
+.form__password::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form__name,
+.form__email,
+.form__password:-ms-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.form__name,
+.form__email,
+.form__password::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
 
 /* Social */
 
@@ -1021,7 +1064,6 @@ input {
     .header {
         padding-top: 13px;
         padding-bottom: 13px;
-
     }
 
     .header__logo {
@@ -1029,7 +1071,7 @@ input {
     }
 
     .nav {
-        display: none;
+        display: flex;
         position: absolute;
         width: 100%;
         top: 100%;
@@ -1037,13 +1079,18 @@ input {
         flex-direction: column;
         text-align-last: left;
         background-color: #000;
-        transform: translateX(100%);
-        transition: transform .2s ease-in-out;
+        opacity: 0;
+        transform: translateX(-300px);
+        
+        transition: transform 0.1s linear, 
+        opacity .2s linear;
+
     }
 
-    .nav.show {
-        display: flex;
+    .show.nav {
+        /* display: flex; */
         transform: translateX(0);
+        opacity: 1;
     }
 
     .nav__link {
@@ -1063,7 +1110,8 @@ input {
 
     .intro__text,
     .intro__form {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .intro__logo {
