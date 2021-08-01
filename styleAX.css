@@ -640,7 +640,7 @@ input {
 }
 
 .price__card {
-    width: 345px;
+    width: 32%;
     transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
 }
 
@@ -694,7 +694,7 @@ input {
 
 .price__card-most {
     display: block;
-    width: 345px;
+    width: 100%;
     height: 5px;
     background-color: #ff8b38;
     margin: 0 auto;
@@ -820,6 +820,8 @@ input {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
 }
 
 .contact__form {
@@ -855,8 +857,34 @@ input {
 
 .contact__form--mess::placeholder {
     font-family: 'Open Sans', sans-serif;
+    font-size: 14px; 
+} 
+
+.contact__form--mess::-webkit-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
+
+.contact__form--mess:-moz-placeholder { /* Firefox 18- */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+  .contact__form--mess::-moz-placeholder {  /* Firefox 19+ */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.contact__form--mess:-ms-input-placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.contact__form--mess::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
 
 .contact__send {
     display: block;
@@ -1056,7 +1084,8 @@ input {
     .feature__b,
     .feature__c,
     .awesome,
-    .contact {
+    .contact,
+    .price {
         padding: 60px 0 70px;
     }
 
@@ -1073,6 +1102,11 @@ input {
     .contact__form {
         width: 100%;
     }
+
+    /* .price__card-most,
+    .price__card {
+    width: 295px;
+    } */
 }
 
 @media (max-width: 991px) {
@@ -1178,6 +1212,13 @@ input {
         margin-bottom: 30px;
     }
 
+    /* .price__card-most,
+    .price__card {
+        width: 245px;
+    } */
+
+
+
 }
 
 @media (max-width: 660px) {
@@ -1237,6 +1278,32 @@ input {
 
     .footer__links {
         padding: 0 15px;
+    }
+
+    .price__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price__card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .price__card-title {
+        padding: 10px 0;
+    }
+
+    .price__cost {
+        margin: 20px 0 15px;
+    }
+
+    .price__card-text {
+        padding-bottom: 10px;
+    }
+
+    .price__card-description div {
+        padding: 5px;
     }
 }
 
